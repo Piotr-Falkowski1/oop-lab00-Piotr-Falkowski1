@@ -6,7 +6,7 @@
 - Wersja Git: 2.56.0.windows.1
 - Wersja kompilatora C++: (zainstalowany przez MSYS2 / UCRT64)
 - Wersje java i javac: openjdk 25.0.4.1
-- Link do pierwszego PR (uzupełnij w zadaniu 5): ...
+- Link do pierwszego PR (uzupełnij w zadaniu 5): https://github.com/Piotr-Falkowski1/oop-lab00-Piotr-Falkowski1/pull/1
 
 ## Uruchomienie lokalne
 Wynik programu C++:
@@ -19,10 +19,16 @@ Wynik programu Java:
 ```
 
 ## Błąd i poprawka (zadanie 5)
-- Krótki fragment komunikatu błędu i numer linii: ...
-- Przyczyna oraz sposób naprawy: ...
-- Commit z błędem (SHA lub link): ...
-- Czy Actions pokazały błąd, a po naprawie sukces? ...
+- Krótki fragment komunikatu błędu i numer linii: cpp/main.cpp:5:68: error: expected ‘;’ before ‘return’
+    5 |     std::cout << "Hello from C++! Author: Piotr-Falkowski1" << '\n'
+      |                                                                    ^
+      |                                                                    ;
+    6 |     return 0;
+      |     ~~~~~~                                                          
+Error: Process completed with exit code 1.
+- Przyczyna oraz sposób naprawy: Celowe usunięcie średnika na końcu instrukcji wypisującej tekst. Naprawa polegała na ponownym dopisaniu średnika (';') na końcu tej linii
+- Commit z błędem (SHA lub link): c06794a
+- Czy Actions pokazały błąd, a po naprawie sukces? Tak, GitHub Actions początkowo zgłosił błąd kompilacji, a po wysłaniu poprawionego kodu proces zakończył się sukcesem na zielono
 
 ## Krótkie odpowiedzi
 1. Co różni commit od push? ...
